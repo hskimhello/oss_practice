@@ -12,7 +12,7 @@ jobs:
     - name: Check spelling of file.txt
       uses: crate-ci/typos@master
       with: 
-        files: ./*.md
+        files: ./*
 
     - name: Writes changes in the local checkout
       uses: crate-ci/typos@master
