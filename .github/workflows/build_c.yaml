@@ -1,6 +1,6 @@
 name: C CI
 
-on: [pull_request]
+on: [pull_request, push]
 
 jobs:
   build:
@@ -9,5 +9,8 @@ jobs:
     steps:
     - uses: actions/checkout@v3
 
-    - name: Build
-      run: gcc main.c
+    - name: Build main.c
+      run: gcc -c main.c -o main.out
+
+    - name: Run main.out
+      run: ./main.out
